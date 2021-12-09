@@ -1,0 +1,71 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "session",
+          "style": "plain",
+          "foreground": "green",
+          "properties": {
+            "prefix": "",
+            "display_host": false
+          }
+        },
+        {
+          "type": "exit",
+          "style": "plain",
+          "properties": {
+            "display_exit_code": false,
+            "always_enabled": true,
+            "color_background": true,
+            "error_icon": "<red><b>\u279C</b></>",
+            "success_icon": "<b>\u279C</b>",
+            "prefix": "",
+            "postfix": ""
+          }
+        },
+        {
+          "type": "path",
+          "style": "plain",
+          "foreground": "blue",
+          "properties": {
+            "style": "full"
+          }
+        },
+        {
+          "type": "git",
+          "style": "plain",
+          "foreground": "green",
+          "properties": {
+            "display_stash_count": true,
+            "display_upstream_icon": true,
+            "branch_icon": "",
+            "display_status": true,
+            "prefix": "<magenta><b>git:(</b></>",
+            "postfix": "<magenta><b>)</b></>",
+            "color_background": false,
+            "staging_color": "#FF6F00",
+            "status_colors_enabled": true,
+            "local_changes_color": "#FFEB3B",
+            "ahead_and_behind_color": "#FFCC80",
+            "behind_color": "#B388FF",
+            "ahead_color": "#B388FF"
+          }
+        },
+        {
+          "type": "text",
+          "style": "plain",
+          "properties": {
+            "text": "<red><b>❯</b></><yellow><b>❯</b></><green><b>❯</b></>",
+            "postfix": "",
+            "prefix": ""
+          }
+        }
+      ]
+    }
+  ],
+  "final_space": true
+}

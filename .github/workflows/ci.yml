@@ -1,0 +1,14 @@
+on:
+  push
+name: CI
+jobs:
+  test:
+    name: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Install shfmt
+        run: curl -sS https://webinstall.dev/shfmt | bash
+      - name: make test
+        run: make test
+        shell: bash
