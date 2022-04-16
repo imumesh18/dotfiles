@@ -3,9 +3,9 @@
 set -e
 
 if [[ $OSTYPE == 'darwin'* ]]; then
-    ./brew.sh
+    ./mac.sh
 elif [[ $OSTYPE == "linux-gnu"* ]]; then
-    ./ubuntu.sh
+    ./linux.sh
 fi
 
 ./copy.sh
