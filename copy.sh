@@ -2,7 +2,7 @@
 
 set -e
 
-mkdir -p ~/.config/nvim ~/.config/ohmyposh ~/.ssh
+mkdir -p ~/.config/nvim ~/.config/ohmyposh ~/.ssh ~/.local/share/nvim/site/pack/
 
 cp -r vimrc ~/.vimrc
 cp -r vim ~/.vim
