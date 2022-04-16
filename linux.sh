@@ -8,7 +8,7 @@ sudo apt-get install build-essential procps curl file git
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.profile
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.zshrc
 
 brew tap homebrew/core
@@ -17,6 +17,7 @@ brew tap homebrew/cask-fonts
 
 brew install autojump
 brew install docker
+brew install flyctl
 brew install fzf
 brew install git
 brew install gh
@@ -26,6 +27,7 @@ brew install httpie
 brew install jq
 brew install kubectl
 brew install kubectx
+brew install node@16
 brew install neovim
 brew install jandedobbeleer/oh-my-posh/oh-my-posh
 brew install postgresql
@@ -33,6 +35,9 @@ brew install rbenv
 brew install redis
 brew install ripgrep
 brew install zsh zsh-completions
+
+## Install Rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 ## Change shell to zsh
 sudo chsh -s $(which zsh)
