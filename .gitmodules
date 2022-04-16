@@ -1,9 +1,9 @@
 [submodule "vim/pack/Xuyuanp/start/nerdtree-git-plugin"]
 	path = vim/pack/Xuyuanp/start/nerdtree-git-plugin
-	url = https://github.com/Xuyuanp/nerdtree-git-plugin
+	url = https://github.com/Xuyuanp/nerdtree-git-plugin.git
 [submodule "vim/pack/scrooloose/start/nerdtree"]
 	path = vim/pack/scrooloose/start/nerdtree
-	url = https://github.com/scrooloose/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
 [submodule "vim/pack/luochen1990/start/rainbow"]
 	path = vim/pack/luochen1990/start/rainbow
 	url = https://github.com/luochen1990/rainbow.git
@@ -21,10 +21,10 @@
 	url = https://github.com/joshdick/onedark.vim.git
 [submodule "vim/pack/dense-analysis/start/ale"]
 	path = vim/pack/dense-analysis/start/ale
-	url = https://github.com/dense-analysis/ale
+	url = https://github.com/dense-analysis/ale.git
 [submodule "vim/pack/junegunn/start/fzf.vim"]
 	path = vim/pack/junegunn/start/fzf.vim
-	url = https://github.com/junegunn/fzf.vim
+	url = https://github.com/junegunn/fzf.vim.git
 [submodule "vim/pack/junegunn/start/fzf"]
 	path = vim/pack/junegunn/start/fzf
-	url = https://github.com/junegunn/fzf
+	url = https://github.com/junegunn/fzf.git
