@@ -24,14 +24,18 @@ brew install jq
 brew install kubectl
 brew install kubectx
 brew install neovim
+brew install jandedobbeleer/oh-my-posh/oh-my-posh
 brew install postgresql
 brew install rbenv
 brew install redis
 brew install ripgrep
 brew install zsh zsh-completions
 
+## Change shell to zsh
+sudo chsh -s $(which zsh)
+
 # Update and upgrade all the formulae and cleanup
-brew update && brew upgrade && brew cask upgrade --greedy && brew cleanup -s
+brew update && brew upgrade && brew cleanup -s
 
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 

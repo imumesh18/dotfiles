@@ -25,6 +25,7 @@ brew install jq
 brew install kubectl
 brew install kubectx --with-short-names
 brew install neovim
+brew install jandedobbeleer/oh-my-posh/oh-my-posh
 brew install postgresql
 brew install rbenv
 brew install redis
