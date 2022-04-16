@@ -9,7 +9,8 @@ sudo apt-get install build-essential procps curl file git
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.zshrc
+sed -i '5 i # Setup linuxbrew' ~/.zshrc
+sed -i '6 i eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"\n' ~/.zshrc
 
 brew tap homebrew/core
 brew tap homebrew/services
@@ -44,6 +45,9 @@ sudo chsh -s $(which zsh)
 
 # Update and upgrade all the formulae and cleanup
 brew update && brew upgrade && brew cleanup -s
+
+## Install Jetbrain Mono Font
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/install_manual.sh)"
 
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 

@@ -2,70 +2,61 @@
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "blocks": [
     {
-      "type": "prompt",
       "alignment": "left",
       "segments": [
         {
-          "type": "session",
-          "style": "plain",
           "foreground": "green",
           "properties": {
-            "prefix": "",
             "display_host": false
-          }
+          },
+          "style": "plain",
+          "template": "{{ .UserName }} ",
+          "type": "session"
         },
         {
-          "type": "exit",
-          "style": "plain",
           "properties": {
-            "display_exit_code": false,
-            "always_enabled": true,
-            "color_background": true,
-            "error_icon": "<red><b>\u279C</b></>",
-            "success_icon": "<b>\u279C</b>",
-            "prefix": "",
-            "postfix": ""
-          }
+            "always_enabled": true
+          },
+          "style": "plain",
+          "template": "{{ if gt .Code 0 }}<red><b>\u279c</b></>{{ else }}<b>\u279c</b>{{ end }}",
+          "type": "exit"
         },
         {
-          "type": "path",
-          "style": "plain",
           "foreground": "blue",
           "properties": {
             "style": "full"
-          }
+          },
+          "style": "plain",
+          "template": " {{ .Path }} ",
+          "type": "path"
         },
         {
-          "type": "git",
-          "style": "plain",
           "foreground": "green",
+          "foreground_templates": [
+            "{{ if or (.Working.Changed) (.Staging.Changed) }}#FFEB3B{{ end }}",
+            "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#FFCC80{{ end }}",
+            "{{ if gt .Ahead 0 }}#B388FF{{ end }}",
+            "{{ if gt .Behind 0 }}#B388FF{{ end }}"
+          ],
           "properties": {
-            "display_stash_count": true,
-            "display_upstream_icon": true,
             "branch_icon": "",
-            "display_status": true,
-            "prefix": "<magenta><b>git:(</b></>",
-            "postfix": "<magenta><b>)</b></>",
-            "color_background": false,
-            "staging_color": "#FF6F00",
-            "status_colors_enabled": true,
-            "local_changes_color": "#FFEB3B",
-            "ahead_and_behind_color": "#FFCC80",
-            "behind_color": "#B388FF",
-            "ahead_color": "#B388FF"
-          }
+            "fetch_stash_count": true,
+            "fetch_status": true,
+            "fetch_upstream_icon": true
+          },
+          "style": "plain",
+          "template": "<magenta><b>git:(</b></>{{ .HEAD }} {{ .BranchStatus }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Staging.Changed) (.Working.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 <#FF6F00>{{ .Staging.String }}</>{{ end }}{{ if gt .StashCount 0}} \uf692 {{ .StashCount }}{{ end }}{{ if gt .WorktreeCount 0}} \uf1bb {{ .WorktreeCount }}{{ end }}<magenta><b>)</b></>",
+          "type": "git"
         },
         {
-          "type": "text",
           "style": "plain",
-          "properties": {
-            "text": "<red><b>❯</b></><yellow><b>❯</b></><green><b>❯</b></>",
-            "postfix": "",
-            "prefix": ""
-          }
+          "template": "<red><b>\u276f</b></><yellow><b>\u276f</b></><green><b>\u276f</b></>",
+          "type": "text"
         }
-      ]
+      ],
+      "type": "prompt"
     }
   ],
-  "final_space": true
+  "final_space": true,
+  "version": 2
 }

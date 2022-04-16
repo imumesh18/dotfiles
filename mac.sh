@@ -39,7 +39,8 @@ brew install --cask google-chrome
 brew install --cask gpg-suite-no-mail
 brew install --cask firefox
 brew install --cask flycut
-brew install --cask font-fira-code
+brew install --cask font-jetbrains-mono font-jetbrains-mono-nerd-font
+
 brew install --cask insomnia
 brew install --cask iterm2
 brew install --cask visula-studio-code
