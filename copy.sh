@@ -2,8 +2,6 @@
 
 set -e
 
-git submodule update --remote
-
 cp -r vimrc ~/.vimrc
 cp -r vim ~/.vim
 cp -r config/nvim/init.vim ~/.config/nvim/init.vim

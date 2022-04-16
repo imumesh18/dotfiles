@@ -8,6 +8,9 @@ sudo apt-get install build-essential procps curl file git
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.profile
+echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.zshrc
+
 brew tap homebrew/core
 brew tap homebrew/services
 brew tap homebrew/cask-fonts
