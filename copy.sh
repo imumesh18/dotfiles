@@ -2,6 +2,8 @@
 
 set -e
 
+mkdir -p ~/.config/nvim ~/.config/ohmyposh ~/.ssh
+
 cp -r vimrc ~/.vimrc
 cp -r vim ~/.vim
 cp -r config/nvim/init.vim ~/.config/nvim/init.vim
