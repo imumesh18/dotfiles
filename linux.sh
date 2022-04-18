@@ -16,6 +16,7 @@ brew tap homebrew/core
 brew tap homebrew/services
 brew tap homebrew/cask-fonts
 
+brew install awscli
 brew install autojump
 brew install docker
 brew install flyctl
@@ -24,6 +25,7 @@ brew install git
 brew install gh
 brew install gnupg
 brew install go
+brew install google-cloud-sdk
 brew install httpie
 brew install jq
 brew install kubectl

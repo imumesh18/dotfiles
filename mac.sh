@@ -14,7 +14,9 @@ brew tap homebrew/core
 brew tap homebrew/services
 brew tap homebrew/cask-fonts
 
+brew install awscli
 brew install autojump
+brew install docker
 brew install fzf
 brew install git
 brew install gh
@@ -23,7 +25,7 @@ brew install go
 brew install httpie
 brew install jq
 brew install kubectl
-brew install kubectx --with-short-names
+brew install kubectx
 brew install neovim
 brew install jandedobbeleer/oh-my-posh/oh-my-posh
 brew install postgresql
@@ -36,6 +38,7 @@ brew install --cask alfred
 brew install --cask docker
 brew install --cask discord
 brew install --cask google-chrome
+brew install --cask google-cloud-sdk
 brew install --cask gpg-suite-no-mail
 brew install --cask firefox
 brew install --cask flycut
