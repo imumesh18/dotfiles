@@ -4,7 +4,7 @@ set -e
 
 sudo -v
 
-sudo apt-get install build-essential procps curl file git
+sudo apt-get install build-essential procps curl file git fontconfig -y
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
@@ -18,6 +18,7 @@ brew tap homebrew/cask-fonts
 
 brew install awscli
 brew install autojump
+brew install bufbuild/buf/buf
 brew install docker
 brew install flyctl
 brew install fzf
@@ -37,6 +38,7 @@ brew install postgresql
 brew install rbenv
 brew install redis
 brew install ripgrep
+brew install unzip
 brew install zsh zsh-completions
 
 ## Install Rust
@@ -51,7 +53,11 @@ brew update && brew upgrade && brew cleanup -s
 ## Install Jetbrain Mono Font
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/install_manual.sh)"
 
+## Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+## Install zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 rbenv init
 
