@@ -2,7 +2,7 @@
 [user]
 	name = Umesh Yadav
 	email = umesh4257@gmail.com
-	signingKey = ~/.ssh/id_ed25519_sk
+    signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOAvYfG0ULhbEC3tHB1dlSsaf2QoK0cJFbJGDheYGGJC
 [core]
 	excludesfile = ~/.gitignore
 	attributesfile = ~/.gitattributes
@@ -21,12 +21,15 @@
 [commit]
 	template = ~/.gitmessage
 	gpgsign = true
+# 1Password ssh gp sign config
+[gpg]
+  format = ssh
+[gpg "ssh"]
+  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+[commit]
+  gpgsign = true
 [tag]
 	gpgsign = true
-[gpg]
-	format = ssh
-[gpg "ssh"]
-	allowedSignersFile = ~/.config/git/allowed_signers
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
@@ -43,7 +46,7 @@
 	s = status -s
 
 	# Amend the currently staged files to the latest commit
-    amend = !git commit --amend --no-edit
+    	amend = !git commit --amend --no-edit
 
 	# Show verbose output about tags, branches or remotes
 	tags = tag -l
